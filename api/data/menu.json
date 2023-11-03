@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "item": "Turkey",
+            "type": "Entree",
+            "chef": {
+                "name": "Seth",
+                "phone_number": "704.517.3957"
+            }
+        },
+        {
+            "item": "Charcuterie",
+            "type": "appetizer",
+            "chef": {
+                "name": "Seth",
+                "phone_number": "704.517.3957"
+            }
+        },
+        {
+            "item": "Chips",
+            "type": "appetizer",
+            "chef": {
+                "name": "Mason",
+                "phone_number": "123.456.7890"
+            }
+        },
+        {
+            "item": "Chicken",
+            "type": "entree",
+            "chef": {
+                "name": "Mason",
+                "phone_number": "123.456.7890"
+            }
+        },
+        {
+            "item": "Treats",
+            "type": "side",
+            "chef": {
+                "name": "Mason",
+                "phone_number": "123.456.7890"
+            }
+        },
+        {
+            "item": "Red Wine",
+            "type": "drink",
+            "chef": {
+                "name": "Maddi",
+                "phone_number": "704.728.6296"
+            }
+        }
+    ]
+}

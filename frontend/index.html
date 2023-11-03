@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="logic.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Friendsgiving 2023</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦃</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="header">&#129411; Friendsgiving 2023 &#129411;</h1>
+      <p class="date">November 19th, 2023</p>
+      <p>
+        Festivities begin at 4:30PM &#8226; Dinner at 6:00PM &#8226;
+        <a href="/friendsgiving.ics" download>Add To Calendar?</a>
+      </p>
+      <hr />
+      <div class="intro">
+        <p>
+          Hey y'all! It's that time of year, we can't wait to see you for
+          friendsgiving. Plan to give thanks, chit-chat, postulate on the world,
+          and eat some really good food. Menu can be found below as well as an
+          over-engineered web form that could have been a text message. But be
+          honest, did you really expect anything different?
+        </p>
+      </div>
+      <hr class="m-t-small" />
+      <div class="menu">
+        <h1 class="header">The Menu</h1>
+        <div id="appetizers">
+          <h2>The evening will start with...</h2>
+          <ul id="appetizer-list"></ul>
+        </div>
+        <div id="entree">
+          <h2>Followed by a main course including...</h2>
+          <ul id="entree-list"></ul>
+        </div>
+        <div id="sides">
+          <h2>Paired masterfully with....</h2>
+          <ul id="side-list"></ul>
+        </div>
+        <div id="dessert">
+          <h2>To cap off the night, we'll have...</h2>
+          <ul id="dessert-list"></ul>
+        </div>
+        <div id="drinks">
+          <h2>Can't forget the drinks...</h2>
+          <ul id="drink-list"></ul>
+        </div>
+      </div>
+      <hr class="m-t-small" />
+      <!-- https://friendsgiving.doublel.studio/api/menu -->
+      <h1 class="header">RSVP</h1>
+      <form action="http://localhost:8012/api/menu" method="post">
+        <div>
+          <h2 class="subheader">About You</h2>
+        </div>
+        <div>
+          <label for="name">Name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="given-name"
+            placeholder="Steve Jobs"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone_number">Phone Number: </label>
+          <input
+            id="phone_number"
+            name="phone_number"
+            type="text"
+            autocomplete="tel"
+            placeholder="123.456.7890"
+            required
+          />
+        </div>
+        <div id="guest-items">
+          <h2 class="subheader">Want to bring anything?</h2>
+          <p>Award winning mashed potatoes? Pumpkin Pie? A karaoke machine?</p>
+          <button class="add-new-item" tabindex="0" onclick="add_new_item()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 448 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              /></svg
+            >New Item
+          </button>
+        </div>
+        <input class="submit-button" type="submit" value="Submit" />
+      </form>
+      <hr class="m-t-small" />
+    </div>
+  </body>
+</html>

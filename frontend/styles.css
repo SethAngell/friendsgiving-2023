@@ -1,0 +1,249 @@
+:root {
+  --flexoki-black: #100f0f;
+  --tx: var(--flexoki-black);
+  --flexoki-paper: #fffcf0;
+
+  --flexoki-950: #1c1b1a;
+  --flexoki-900: #282726;
+  --flexoki-850: #343331;
+  --flexoki-800: #403e3c;
+  --flexoki-700: #575653;
+  --flexoki-600: #6f6e69;
+  --tx-2: var(--flexoki-600);
+  --flexoki-500: #878580;
+  --flexoki-300: #b7b5ac;
+  --flexoki-200: #cecdc3;
+  --flexoki-150: #dad8ce;
+  --flexoki-100: #e6e4d9;
+  --flexoki-50: #f2f0e5;
+
+  --flexoki-red-600: #af3029;
+  --flexoki-red-400: #d14d41;
+
+  --flexoki-orange-600: #bc5215;
+  --flexoki-orange-400: #da702c;
+
+  --flexoki-yellow-900: #4d3a0b;
+  --flexoki-yellow-600: #ad8301;
+  --flexoki-yellow-400: #d0a215;
+  --flexoki-yellow-100: #fceeb8;
+
+  --flexoki-green-600: #66800b;
+  --flexoki-green-400: #879a39;
+
+  --flexoki-cyan-950: #142625;
+  --flexoki-cyan-600: #24837b;
+  --flexoki-cyan-400: #3aa99f;
+  --flexoki-cyan-50: #ebf2e7;
+
+  --flexoki-blue-600: #205ea6;
+  --flexoki-blue-400: #4385be;
+
+  --flexoki-purple-600: #5e409d;
+  --flexoki-purple-400: #8b7ec8;
+
+  --flexoki-magenta-600: #a02f6f;
+  --flexoki-magenta-400: #ce5d97;
+
+  --content-page-width: 50%;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--flexoki-paper);
+  font-family: "Eczar", serif;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  color: var(--tx);
+  font-size: 2rem;
+}
+
+p,
+li {
+  color: var(--tx-2);
+  font-size: 1.2rem;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+label {
+  color: var(--tx-1);
+  font-size: 1.2rem;
+}
+
+hr {
+  border: 1px solid var(--flexoki-orange-400);
+  border-radius: 2px;
+  width: 10rem;
+}
+
+form {
+  width: var(--content-page-width);
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--flexoki-orange-400);
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  row-gap: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--flexoki-600);
+  border-radius: 0.25rem;
+}
+
+input::placeholder {
+  color: var(--tx-2);
+}
+
+.m-t-small {
+  margin-top: 2rem;
+}
+
+form > div,
+form > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--tx-2);
+}
+
+a:hover,
+a:focus {
+  color: var(--flexoki-blue-600);
+  text-decoration: underline;
+}
+
+div.main {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  margin-top: 0;
+}
+
+.header {
+  margin-bottom: 0;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+
+  + p {
+    text-align: center;
+  }
+
+  ~ button {
+    margin-top: 1rem;
+    width: fit-content;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: var(--flexoki-orange-600);
+    background-color: var(--flexoki-paper);
+    border: 2px solid var(--flexoki-orange-400);
+    font-family: "Eczar", serif;
+    border-radius: 0.25rem;
+  }
+
+  ~ button:hover,
+  ~ button:focus {
+    background-color: var(--flexoki-orange-400);
+    color: var(--flexoki-paper);
+    fill: var(--flexoki-paper);
+  }
+}
+
+select {
+  width: 25%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: var(--content-page-width);
+  text-align: center;
+}
+
+.menu {
+  width: var(--content-page-width);
+
+  .header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.add-new-item {
+  color: var(--flexoki-orange-400);
+  fill: var(--flexoki-orange-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button {
+  color: var(--flexoki-green-600);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-left: auto;
+  margin-top: 1rem;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: var(--flexoki-green-600);
+  background-color: var(--flexoki-paper);
+  border: 2px solid var(--flexoki-green-600);
+  font-family: "Eczar", serif;
+  border-radius: 0.25rem;
+}
+
+.submit-button:focus,
+.submit-button:hover {
+  background-color: var(--flexoki-green-600);
+  color: var(--flexoki-paper);
+  fill: var(--flexoki-paper);
+}
+
+.new-item-container {
+  display: flex;
+  flex-direction: row;
+
+  > input {
+    width: 75%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+  }
+}
+
+.new-item-instance {
+  margin-top: 0.5rem;
+}

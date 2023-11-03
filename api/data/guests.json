@@ -1,0 +1,16 @@
+{
+    "guest_list": [
+        {
+            "name": "Seth",
+            "phone_number": "704.517.3957"
+        },
+        {
+            "name": "Mason",
+            "phone_number": "123.456.7890"
+        },
+        {
+            "name": "Maddi",
+            "phone_number": "704.728.6296"
+        }
+    ]
+}

@@ -1,11 +1,12 @@
 const state = {
   menu: {},
-  dev: true,
+  dev: false,
   current_item: 1,
 };
 
 const CONSTANTS = {
   dev_menu_endpoint: "http://localhost:8012/api/menu",
+  prod_menu_endpoint: "https://friendsgiving.doublel.studio/api/menu",
   menu_categories: {
     Entree: "entree-list",
     Appetizer: "appetizer-list",
@@ -35,7 +36,7 @@ const option_partial = `<div class="new-item-instance">
 </div>`;
 
 async function get_menu() {
-  menu_url = state.dev ? CONSTANTS.dev_menu_endpoint : null;
+  menu_url = state.dev ? CONSTANTS.dev_menu_endpoint : CONSTANTS.prod_menu_endpoint;
   return fetch(menu_url);
 }
 
@@ -50,9 +51,8 @@ function add_food_to_menu() {
         element.type.toLocaleLowerCase() == category.toLocaleLowerCase()
     );
 
-    if (!items || items?.length < 1) {
-      menu_element.innerHTML += "<li>That is too be seen...</li>";
-    } else {
+    if (items && items?.length > 0) {
+      
       items.forEach((item) => {
         template =
           item.type.toLocaleLowerCase() == "drink"
@@ -101,8 +101,9 @@ get_menu()
   .then((response) => response.json())
   .then((data) => {
     state.menu = data.items;
-    console.log(state.menu);
   })
   .then(() => {
     add_food_to_menu();
   });
+
+console.log('Oh hey there. I\'m guessing this is either Cody or Trace reading this. hows it going my guys? El Cerro or Big Thai this week?')

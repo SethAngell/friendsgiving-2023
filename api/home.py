@@ -29,7 +29,7 @@ def menu():
         add_guest_to_guest_list(request.form)
         add_all_items_to_menu(request.form)
         redirect_url = '///Users/sethangell/Developer/friendsgiving/frontend/index.html' if app.debug else 'https://friendsgiving.doublel.studio'
-        return redirect(redirect_url, code=200)
+        return redirect(redirect_url, code=302)
 
 @app.route("/api/guests", methods=["GET", "POST"])
 def guests():
@@ -43,4 +43,6 @@ def guests():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8012, debug=bool(os.getenv('PRODUCTION', False)))
+    debug = bool(os.getenv('PRODUCTION', False)) == False
+    print(debug)
+    app.run(host="0.0.0.0", port=8012, debug=debug)
